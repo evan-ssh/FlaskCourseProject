@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow" style="width: 100%; max-width: 400px; background-color: #0d6efd;">
+        <div class="card-body">
+            <h4 class="card-title mb-4 text-center text-white">Add to Your Archive</h4>
+            <form action="/add" method="post" enctype="multipart/form-data">
+                <div class="mb-3 form-floating">
+                    <input type="text" class="form-control text-center" id="title" name="title" placeholder="">
+                    <label for="title" class="text-secondary">Title</label>
+                </div>
+                <div class="mb-3 form-floating">
+                    <input type="text" class="form-control text-center" id="plat" name="plat" placeholder="">
+                    <label for="plat" class="text-secondary">Platform</label>
+                </div>
+                <div class="mb-3 form-floating">
+                    <input type="text" class="form-control text-center" id="year" name="year" placeholder="">
+                    <label for="year" class="text-secondary">Year</label>
+                </div>
+                <div class="mb-3 form-floating">
+                    <input type="text" class="form-control text-center" id="price" name="price" placeholder="">
+                    <label for="price" class="text-secondary">Price</label>
+                </div>
+                <div class="mb-3">
+                    <label for="file" class="form-label text-white">Image</label>
+                    <input type="file" class="form-control" id="file" name="file">
+                </div>
+                <button type="submit" class="btn btn-add-game">Add Game</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/static/verify.js"></script>
+{% endblock %}
