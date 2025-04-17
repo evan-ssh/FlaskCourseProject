@@ -58,5 +58,18 @@ def add():
         flash("Good job! You have added a new game to your collection", "message")
         return redirect("/")
     
+# Delete a game
+@app.route("/delete/<int:game_index>", methods=["POST"])
+def delete(game_index):
+    if "videoGames" in session:
+        try:
+            session["videoGames"].pop(game_index)
+            session.modified = True
+            flash("Game deleted successfully!", "message")
+        except IndexError:
+            flash("Error deleting game!", )
+    else:
+        flash("No games to delete!", "error")
+    return redirect("/")
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
