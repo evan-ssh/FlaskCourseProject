@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('/static/images/pinksky.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Form Styling*/
+.form-control {
+    background-color: rgba(30, 30, 30, 0.7) !important;
+    color: #fff !important;
+    border: 1px solid #444;
+}
+.form-control::placeholder {
+    color: #fff !important;
+    opacity: 1;
+}
+.form-floating > label {
+    color: #fff !important;
+}
+
+input[type="file"].form-control {
+    color: #fff !important;
+}
+input[type="file"].form-control::file-selector-button {
+    background-color: rgba(30, 30, 30, 0.7) !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+    border-radius: 6px !important;
+    padding: 8px 16px !important;
+    transition: background 0.2s, color 0.2s !important;
+    cursor: pointer !important;
+}
+input[type="file"].form-control::file-selector-button:hover {
+    background-color: rgba(30, 30, 30, 0.9) !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+}
+
+.btn-add-game {
+    background-color: rgba(30, 30, 30, 0.7) !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 6px;
+}
+.btn-add-game:hover {
+    background-color: rgba(30, 30, 30, 0.9) !important;
+    border: 1px solid #fff !important;
+}
+.btn-primary, .btn-primary:focus, .btn-primary:active {
+    background-color: #002147 !important;
+    border-color: #002147 !important;
+    color: #fff !important;
+}
+
+/* Game card */
+.card {
+    background: rgba(20, 30, 60, 0.85) !important;
+    background-image: url('/static/images/pixelartsky.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff !important;
+    border: 2px solid #000;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+/* Video game card image */
+.custom-image {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 15px;
+    object-fit: cover;
+    display: block;
+    float: right;
+}
+
+/* Delete button */
+.delete-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    display: none !important;
+    padding: 1px 7px !important;
+    line-height: 1 !important;
+}
+
+.card:hover .delete-btn,
+.custom-card:hover .delete-btn {
+    display: block !important;
+}
+
+/* Flash Message */
+.error {
+    background-color: beige;
+    color: red;
+    border: 1px solid red;
+}
+.message {
+    background-color: aqua;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Collection Value */
+.total-value {
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 8px 16px;
+    display: inline-block;
+    text-align: left;
+}
