@@ -1,7 +1,10 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h3 class="my-3 total-value">Total Collection Value: ${{ '%.2f'|format(total_value) }}</h3>
+<h3 class="my-3 total-value">
+    <i class="bi bi-coin me-2"></i>
+    Total Collection Value: ${{ '%.2f'|format(total_value) }}
+</h3>
 <div class="container">
     <div class="row">
         {% for game in games %}

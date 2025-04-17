@@ -123,11 +123,14 @@ input[type="file"].form-control::file-selector-button:hover {
 
 /* Collection Value */
 .total-value {
-    color: #000;
-    background: #fff;
-    border: 1px solid #000;
-    border-radius: 6px;
-    padding: 8px 16px;
-    display: inline-block;
-    text-align: left;
+    color: #222;
+    background: #ffe066;
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    padding: 10px 24px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(245, 209, 2, 0.2);
+    font-size: 1.3em;
 }
